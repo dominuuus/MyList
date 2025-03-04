@@ -1,0 +1,87 @@
+:root {
+    --primary-color: #0D1B2A;
+    --light-primary: #1B263B;
+    --lightest-color: #E0E1DD;
+    --secondary-color: #415A77;
+    --light-secondary: #778DA9;
+    --favorite-color: #e9ebd5;
+    --white: #fff;
+    --font-family: 'Montserrat', sans-serif;
+}
+
+
+#modal-overlay {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay {
+    visibility: hidden;
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+
+.open {
+    visibility: visible;
+    opacity: 1;
+}
+
+#modal-background {
+    background-color: var(--light-secondary);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 0;
+    opacity: 0.4;
+}
+
+#modal-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: var(--lightest-color);
+    z-index: 1;
+    padding: 1rem;
+    border-radius: 10px;
+    overflow-y: scroll;
+    height: 80vh;
+    -webkit-scrollbar { display: none; }
+}
+
+
+#modal-body {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+}
+
+#tvShow-image {
+    width: 200px;
+    height: 300px;
+    border-radius: 10px;
+}
+
+#tvShow-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 10px;
+    max-width: 300px;
+}
+
+#add-to-list {
+    width: 100%;
+    padding: 0.3rem 0;
+    border-radius: 10px;
+}
+
+#add-to-list:hover,
+#add-to-list:focus {
+    background-color: var(--favorite-color);
+}

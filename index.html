@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="modal.css">
+    <link rel="stylesheet" href="./src/notie-master/dist/notie.min.css" />
+
+    <title>My favorite TV Show</title>
+
+    <!-- Links para trazer os ícones via CDN -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/solid.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/fontawesome.css" />
+
+</head>
+
+<body>
+    <header>
+        <div class="page-title">
+            <i class="fa fa-film"></i>
+            <h1 class="titulo">My List</h1>
+        </div>
+
+        <section class="search-box">
+            <label for="searchContent">Nome: </label>
+            <input type="text" name="searchContent" id="searchContent">
+            <label for="language">Language: </label>
+            <select name="language" id="language">
+                <option value="pt-BR">Português</option>
+                <option value="en">English</option>
+                <option value="es">Español</option>
+            </select>
+            <button type="submit" id="searchButton"><i class="fa fa-search"> Buscar</i></button>
+        </section>
+    </header>
+
+    <main>
+        <div id="tvShow-label">
+            <h2>Sua lista de filmes</h2>
+        </div>
+        <section id="tvShow-list"></section>
+
+        <article id="modal-overlay" class="overlay">
+            <section id="modal-background"></section>
+            <section id="modal-container">
+            </section>
+        </article>
+    </main>
+    <script src="./script.js"></script>
+    <script src="./key.js"></script>
+    <script src="./modal.js"></script>
+    <script src="./src/notie-master/dist/notie.min.js"></script>
+</body>
+
+</html>
